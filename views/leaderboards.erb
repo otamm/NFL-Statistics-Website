@@ -8,7 +8,7 @@
   </head>
     <% @leaderboards.each_with_index do |game,i| %>
       <div>
-        <p> <%= "Position: #{i} | Team: #{game[:home_team]} | Points Scored: #{game[:total_scored]} | Points Suffered: #{game[:total_suffered]} | Won: #{game[:wins]} | Lost: #{game[:losses]} Overall Score: #{game[:victory_balance]}" %></p>
+        <p> <%= "Position: #{i + 1} | Team: #{game[:name]} | Points Scored: #{game[:total_scored]} | Points Suffered: #{game[:total_suffered]} | Won: #{game[:wins]} | Lost: #{game[:losses]} | Overall Score: #{game[:victory_balance]}" %></p>
 
       </div>
 
