@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>NFL Games</title>
+
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <% @games_so_far.each do |game| %>
+      <div>
+        <%= "Home Team: #{game[:home_team]} | Away Team: #{game[:away_team]} | Home Score: #{game[:home_score]} | Away Score: #{game[:away_score]}" %>
+
+      </div>
+
+    <%end%>
+</body>
+</html>

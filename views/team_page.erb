@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>NFL Games</title>
+
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+  <h1><%= @team_page %></h1>
+  <h2>Overall Statistics</h2>
+      <div>
+         <%= "Team: #{@total[:name]} | Positive Score: #{@total[:total_scored]} | Negative Score: #{@total[:total_suffered]} | Victories: #{@total[:wins]} | Defeats: #{@total[:losses]} | Total Points: #{@total[:victory_balance]}"%></div>
+
+
+  <h2>Game Results</h2>
+    <% @participated.each do |played| %>
+    <div><%= "Home Team: #{played[:home_team]} | Away Team: #{played[:away_team]} | Home Score: #{played[:home_score]} | Away Score: #{played[:away_score]}" %></div>
+
+    <%end%>
+</body>
+</html>
